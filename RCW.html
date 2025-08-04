@@ -1,0 +1,50 @@
+
+### 4. index.html (Updated)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Collaborative Whiteboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Collaborators</h2>
+            <div id="user-list"></div>
+            <div class="connection-controls">
+                <input type="text" id="room-id" placeholder="Enter Room ID">
+                <button id="connect-button">Connect</button>
+                <button id="copy-button" title="Copy your ID">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="controls">
+                <div class="tool-group">
+                    <button class="tool-button active" id="pen-tool" title="Pen">
+                        <i class="fas fa-pen"></i>
+                    </button>
+                    <button class="tool-button" id="eraser-tool" title="Eraser">
+                        <i class="fas fa-eraser"></i>
+                    </button>
+                </div>
+                <input type="color" id="color-picker" value="#000000" title="Color">
+                <input type="range" id="size-slider" min="1" max="50" value="5" title="Size">
+                <button id="clear-button" title="Clear Canvas">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+            <canvas id="whiteboard"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

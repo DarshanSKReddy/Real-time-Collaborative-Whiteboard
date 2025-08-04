@@ -1,0 +1,10 @@
+collaborative-whiteboard/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+├── .gitignore
+├── LICENSE
+└── README.md
+
